@@ -2,7 +2,7 @@ const seedRestaurants = [
   {
     id: 'r1', name: 'The Burger Joint', cuisine: 'American',
     description: 'Handcrafted burgers with premium ingredients and secret house sauces',
-    rating: 4.5, gradient: 'linear-gradient(135deg, #b91c1c, #7f1d1d)',
+    rating: 4.5, gradient: 'linear-gradient(135deg, #800020, #5c0017)',
     branches: [
       { id: 'b1', name: 'Downtown', address: '123 Main Street', queueCount: 3, avgPrepTime: 8 },
       { id: 'b2', name: 'Midtown', address: '456 Oak Avenue', queueCount: 1, avgPrepTime: 10 },
@@ -18,7 +18,7 @@ const seedRestaurants = [
   {
     id: 'r2', name: 'Sushi Master', cuisine: 'Japanese',
     description: 'Authentic Japanese sushi and rolls crafted with the freshest fish',
-    rating: 4.8, gradient: 'linear-gradient(135deg, #dc2626, #991b1b)',
+    rating: 4.8, gradient: 'linear-gradient(135deg, #722f37, #4a0012)',
     branches: [
       { id: 'b4', name: 'Upper East', address: '321 5th Avenue', queueCount: 2, avgPrepTime: 12 },
       { id: 'b5', name: 'Williamsburg', address: '654 Bedford Ave', queueCount: 4, avgPrepTime: 15 },
@@ -32,7 +32,7 @@ const seedRestaurants = [
   {
     id: 'r3', name: 'Pizza Paradise', cuisine: 'Italian',
     description: 'Wood-fired Neapolitan pizzas with imported Italian ingredients',
-    rating: 4.6, gradient: 'linear-gradient(135deg, #9f1239, #881337)',
+    rating: 4.6, gradient: 'linear-gradient(135deg, #6b1530, #3b0010)',
     branches: [
       { id: 'b6', name: 'SoHo', address: '100 Prince Street', queueCount: 6, avgPrepTime: 15 },
       { id: 'b7', name: 'Chelsea', address: '200 W 23rd Street', queueCount: 2, avgPrepTime: 12 },

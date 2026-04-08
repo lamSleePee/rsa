@@ -7,12 +7,12 @@ const REST_KEY = 'foodq_restaurants'
 const ORDERS_KEY = 'foodq_orders'
 
 const GRADIENTS = [
-  'linear-gradient(135deg, #b91c1c, #7f1d1d)',
-  'linear-gradient(135deg, #dc2626, #991b1b)',
-  'linear-gradient(135deg, #9f1239, #881337)',
-  'linear-gradient(135deg, #e11d48, #be123c)',
-  'linear-gradient(135deg, #450a0a, #1c1917)',
-  'linear-gradient(135deg, #be123c, #9f1239)',
+  'linear-gradient(135deg, #800020, #5c0017)',
+  'linear-gradient(135deg, #722f37, #4a0012)',
+  'linear-gradient(135deg, #6b1530, #3b0010)',
+  'linear-gradient(135deg, #91283b, #5c0017)',
+  'linear-gradient(135deg, #4a0012, #2d000b)',
+  'linear-gradient(135deg, #800020, #3b0010)',
 ]
 
 function generateId() {
