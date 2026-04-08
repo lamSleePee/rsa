@@ -777,6 +777,13 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius);
   padding: 24px;
   box-shadow: var(--shadow-sm);
+  min-width: 0;
+}
+
+.cart-items-section h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
 }
 
 .cart-page-item {
@@ -785,6 +792,23 @@ img { max-width: 100%; display: block; }
   align-items: center;
   padding: 16px 0;
   border-bottom: 1px solid var(--border-light);
+  gap: 16px;
+}
+
+.cart-page-item .cart-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.cart-page-item .cart-item-info h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.cart-page-item .cart-item-info p {
+  font-size: 0.83rem;
+  color: var(--text-muted);
 }
 
 .cart-page-item:last-child {
@@ -866,7 +890,7 @@ img { max-width: 100%; display: block; }
   padding: 14px;
   border: none;
   border-radius: var(--radius-md);
-  background: var(--success);
+  background: var(--primary);
   color: var(--white);
   font-size: 1rem;
   font-weight: 600;
@@ -874,7 +898,7 @@ img { max-width: 100%; display: block; }
   margin-top: 8px;
 }
 
-.pay-btn:hover { background: #059669; }
+.pay-btn:hover { background: var(--primary-hover); }
 .pay-btn:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* ==================== PAYMENT MODAL ==================== */
