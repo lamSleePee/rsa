@@ -15,7 +15,7 @@ export default function Navbar() {
       <nav className="navbar">
         <div className="container">
           <Link to="/" className="navbar-brand">
-            Food<span>Q</span>
+            En<span>Caveman</span>
           </Link>
           <div className="navbar-links">
             <Link

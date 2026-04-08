@@ -1,6 +1,6 @@
 const ADMIN_USER = 'admin'
 const ADMIN_PASS = 'root'
-const ADMIN_TOKEN = 'foodq-demo-admin-token'
+const ADMIN_TOKEN = 'encaveman-demo-admin-token'
 
 export default function handler(req, res) {
   if (req.method !== 'POST') {

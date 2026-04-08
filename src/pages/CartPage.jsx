@@ -4,14 +4,14 @@ import { useCart } from '../context/CartContext'
 import { seedRestaurants } from '../data/seedData'
 import PaymentModal from '../components/PaymentModal'
 
-const ORDERS_KEY = 'foodq_orders'
+const ORDERS_KEY = 'encaveman_orders'
 
 function generateId() {
   return Date.now().toString(36) + Math.random().toString(36).substr(2, 6)
 }
 
 function getRestaurant(id) {
-  const custom = JSON.parse(localStorage.getItem('foodq_restaurants') || '[]')
+  const custom = JSON.parse(localStorage.getItem('encaveman_restaurants') || '[]')
   return [...seedRestaurants, ...custom].find(r => r.id === id)
 }
 

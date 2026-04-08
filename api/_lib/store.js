@@ -48,7 +48,7 @@ const seedRestaurants = [
 const restaurants = [...seedRestaurants]
 const orders = []
 
-const ADMIN_TOKEN = 'foodq-demo-admin-token'
+const ADMIN_TOKEN = 'encaveman-demo-admin-token'
 
 export function verifyAdmin(req) {
   const auth = req.headers.authorization

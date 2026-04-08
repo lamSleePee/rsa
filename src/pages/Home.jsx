@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { seedRestaurants } from '../data/seedData'
 import RestaurantCard from '../components/RestaurantCard'
 
-const STORAGE_KEY = 'foodq_restaurants'
+const STORAGE_KEY = 'encaveman_restaurants'
 
 function loadRestaurants() {
   try {

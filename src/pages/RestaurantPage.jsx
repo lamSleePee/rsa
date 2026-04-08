@@ -4,7 +4,7 @@ import { seedRestaurants } from '../data/seedData'
 import MenuItemCard from '../components/MenuItemCard'
 import BranchSelector from '../components/BranchSelector'
 
-const STORAGE_KEY = 'foodq_restaurants'
+const STORAGE_KEY = 'encaveman_restaurants'
 
 function loadRestaurants() {
   try {

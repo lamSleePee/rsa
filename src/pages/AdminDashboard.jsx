@@ -3,8 +3,8 @@ import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import { seedRestaurants } from '../data/seedData'
 
-const REST_KEY = 'foodq_restaurants'
-const ORDERS_KEY = 'foodq_orders'
+const REST_KEY = 'encaveman_restaurants'
+const ORDERS_KEY = 'encaveman_orders'
 
 const GRADIENTS = [
   'linear-gradient(135deg, #800020, #5c0017)',

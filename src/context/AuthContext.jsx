@@ -4,8 +4,8 @@ const AuthContext = createContext()
 
 const ADMIN_USER = 'admin'
 const ADMIN_PASS = 'root'
-const TOKEN_KEY = 'foodq_admin_token'
-const ADMIN_TOKEN = 'foodq-demo-admin-token'
+const TOKEN_KEY = 'encaveman_admin_token'
+const ADMIN_TOKEN = 'encaveman-demo-admin-token'
 
 export function AuthProvider({ children }) {
   const [isAdmin, setIsAdmin] = useState(() => {

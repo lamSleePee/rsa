@@ -2,7 +2,7 @@ import { createContext, useContext, useReducer, useEffect } from 'react'
 
 const CartContext = createContext()
 
-const STORAGE_KEY = 'foodq_cart'
+const STORAGE_KEY = 'encaveman_cart'
 
 function loadCart() {
   try {
