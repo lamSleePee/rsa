@@ -109,11 +109,6 @@ export function CartProvider({ children }) {
   }, [cart])
 
   const addItem = (menuItem, restaurantId, restaurantName) => {
-    if (cart.restaurantId && cart.restaurantId !== restaurantId && cart.items.length > 0) {
-      if (!window.confirm('Adding items from a different restaurant will clear your current cart. Continue?')) {
-        return
-      }
-    }
     dispatch({ type: 'ADD_ITEM', payload: { menuItem, restaurantId, restaurantName } })
   }
 
