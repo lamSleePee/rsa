@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
 import { seedRestaurants } from '../data/seedData'
@@ -16,7 +16,7 @@ function getRestaurant(id) {
 }
 
 export default function CartPage() {
-  const { cart, total, updateQty, clearCart } = useCart()
+  const { cart, total, updateQty, setBranch, clearCart } = useCart()
   const navigate = useNavigate()
 
   const [customerName, setCustomerName] = useState('')
@@ -25,6 +25,13 @@ export default function CartPage() {
 
   const restaurant = cart.restaurantId ? getRestaurant(cart.restaurantId) : null
   const branch = restaurant?.branches.find(b => b.id === cart.branchId)
+
+  useEffect(() => {
+    if (restaurant && !cart.branchId && restaurant.branches.length > 0) {
+      const first = restaurant.branches[0]
+      setBranch(first.id, first.name)
+    }
+  }, [restaurant])
 
   const estimatedMinutes = branch
     ? (branch.queueCount + 1) * branch.avgPrepTime
@@ -68,7 +75,7 @@ export default function CartPage() {
     )
   }
 
-  const canCheckout = customerName.trim() && customerPhone.trim() && cart.branchId
+  const canCheckout = customerName.trim() && customerPhone.trim()
 
   return (
     <div className="cart-page">
@@ -134,18 +141,23 @@ export default function CartPage() {
               />
             </div>
 
-            {!cart.branchId && (
-              <p style={{
-                color: 'var(--danger)',
-                fontSize: '0.85rem',
-                fontWeight: 500,
-                marginBottom: 12,
-                padding: '8px 12px',
-                background: 'var(--danger-light)',
-                borderRadius: 'var(--radius-sm)',
-              }}>
-                Please select a branch on the restaurant page first
-              </p>
+            {restaurant && restaurant.branches.length > 0 && (
+              <div className="form-group">
+                <label>Branch</label>
+                <select
+                  value={cart.branchId || ''}
+                  onChange={e => {
+                    const b = restaurant.branches.find(b => b.id === e.target.value)
+                    if (b) setBranch(b.id, b.name)
+                  }}
+                >
+                  {restaurant.branches.map(b => (
+                    <option key={b.id} value={b.id}>
+                      {b.name} — {b.queueCount === 0 ? 'No queue' : `${b.queueCount} in queue`} (~{(b.queueCount + 1) * b.avgPrepTime} min)
+                    </option>
+                  ))}
+                </select>
+              </div>
             )}
 
             {branch && (
